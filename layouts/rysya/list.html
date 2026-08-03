@@ -1,0 +1,41 @@
+{{ define "main" }}
+
+<section class="rysya-page">
+    <header class="rysya-intro">
+        <h1>山猫 リシャ</h1>
+
+        <p>
+            リシャは、生みの親の世界で暮らす山猫の少女です。
+            好奇心のままにあちこちへ顔を出し、毎日のようにさまざまな出来事に巻き込まれています。
+            このページでは、リシャのいちばん新しい出来事をご紹介しています。
+            その続きは、生みの親のBlueskyで毎日公開しています。
+        </p>
+    </header>
+</section>
+
+<section class="rysya-latest">
+    <h2>最新のおはなし</h2>
+
+    <div class="rysya-post">
+        {{ with index site.Data "rysya-latest" }}
+            {{ .html | safeHTML }}
+        {{ else }}
+            <p>Blueskyの最新投稿を準備しています。</p>
+        {{ end }}
+    </div>
+</section>
+
+<section class="support">
+    <p>
+        私の創作活動を気に入っていただけましたら、ご支援いただけると嬉しいです。
+    </p>
+
+    <iframe
+        title="lava.top"
+        width="350"
+        height="60"
+        src="https://widget.lava.top/fe45412d-2096-4447-ab60-8e248defd345">
+    </iframe>
+</section>
+
+{{ end }}
