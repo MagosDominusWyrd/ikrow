@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   update:
@@ -21,9 +22,11 @@ jobs:
         run: python3 scripts/update_rysya_post.py
 
       - name: Commit updated post
+        id: commit
         run: |
           if git diff --quiet -- data/rysya-latest.json; then
             echo "Последний пост Рыси не изменился."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
@@ -33,3 +36,11 @@ jobs:
           git add data/rysya-latest.json
           git commit -m "Update latest Rysya post"
           git push
+
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Trigger Hugo deployment
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run hugo.yml --ref main
