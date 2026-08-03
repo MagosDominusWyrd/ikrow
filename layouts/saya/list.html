@@ -32,11 +32,17 @@
         target="_blank"
         rel="noopener noreferrer"
     >
-        <img
-            src="{{ "images/saya-june.png" | relURL }}"
-            alt="早見沙耶の日記 2026年6月"
-            class="issue-cover"
-        >
+        {{ with resources.Get "images/saya-june.png" }}
+            {{ with .Resize "1000x webp q82" }}
+                <img
+                    src="{{ .RelPermalink }}"
+                    width="{{ .Width }}"
+                    height="{{ .Height }}"
+                    alt="早見沙耶の日記 2026年6月"
+                    class="issue-cover"
+                >
+            {{ end }}
+        {{ end }}
     </a>
 
     <a
@@ -45,37 +51,35 @@
         target="_blank"
         rel="noopener noreferrer"
     >
-        <img
-            src="{{ "images/saya-july.png" | relURL }}"
-            alt="早見沙耶の日記 2026年7月"
-            class="issue-cover"
-        >
+        {{ with resources.Get "images/saya-july.png" }}
+            {{ with .Resize "1000x webp q82" }}
+                <img
+                    src="{{ .RelPermalink }}"
+                    width="{{ .Width }}"
+                    height="{{ .Height }}"
+                    alt="早見沙耶の日記 2026年7月"
+                    class="issue-cover"
+                >
+            {{ end }}
+        {{ end }}
     </a>
 
 </section>
 
+{{/*
 <section class="support">
-
     <p>
-
         沙耶の物語を気に入っていただけましたら、ご支援いただけると嬉しいです。
-
     </p>
 
     <iframe
-
         title="lava.top"
-
         style="border: none"
-
         width="350"
-
         height="60"
-
         src="https://widget.lava.top/fe45412d-2096-4447-ab60-8e248defd345">
-
     </iframe>
-
 </section>
+*/}}
 
 {{ end }}

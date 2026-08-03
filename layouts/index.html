@@ -36,11 +36,21 @@
         class="story-card-link"
     >
 
+        {{ with resources.Get "images/saya-title.png" }}
+
+    {{ with .Resize "1000x webp q82" }}
+
         <img
-            src="{{ "images/saya-title.png" | relURL }}"
+            src="{{ .RelPermalink }}"
+            width="{{ .Width }}"
+            height="{{ .Height }}"
             alt="早見沙耶の日記"
             class="story-image"
         >
+
+    {{ end }}
+
+{{ end }}
 
         <h3>早見沙耶の日記</h3>
 
@@ -51,6 +61,37 @@
     </a>
 </section>
 
+<section class="story-card">
+    <a
+        href="{{ "rysya/" | relURL }}"
+        class="story-card-link"
+    >
+
+        {{ with resources.Get "images/rysya-title.png" }}
+            {{ with .Resize "1000x webp q82" }}
+                <img
+                    src="{{ .RelPermalink }}"
+                    width="{{ .Width }}"
+                    height="{{ .Height }}"
+                    alt="山猫 リシャ"
+                    class="story-image"
+                >
+            {{ end }}
+        {{ end }}
+
+        <h3>山猫 リシャ</h3>
+
+        <p>
+            リシャは、生みの親の世界で暮らす山猫の少女です。
+            好奇心のままにあちこちへ顔を出し、毎日のようにさまざまな出来事に巻き込まれています。
+            このページでは、リシャのいちばん新しい出来事をご紹介しています。
+            その続きは、生みの親のBlueskyで毎日公開しています。
+        </p>
+
+    </a>
+</section>
+
+{{/*
 <section class="support">
 
     <p>
@@ -74,5 +115,6 @@
     </iframe>
 
 </section>
+*/}}
 
 {{ end }}
