@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="{{ "favicon/favicon.svg" | relURL }}"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="{{ "favicon/favicon-32x32.png" | relURL }}"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="{{ "favicon/favicon-16x16.png" | relURL }}"
+    >
+
+    <link
+        rel="shortcut icon"
+        href="{{ "favicon.ico" | relURL }}"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="{{ "favicon/apple-touch-icon.png" | relURL }}"
+    >
+
+    <link
+        rel="manifest"
+        href="{{ "favicon/site.webmanifest" | relURL }}"
+    >
+
+    <meta name="theme-color" content="#101820">
+
+    <title>{{ .Site.Title }}</title>
+
+    {{ with resources.Get "css/main.css" }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ end }}
+</head>
+<body>
+
+    {{ partial "header.html" . }}
+
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+
+</body>
+</html>

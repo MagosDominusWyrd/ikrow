@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+    background: #FBFDFF;
+    color: #0A0A0A;
+    font-family: "Shippori Mincho", serif;
+}
+
+.site-header {
+    text-align: center;
+}
+
+.site-logo {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.site-logo img {
+    display: block;
+    width: 260px;
+    max-width: 70vw;
+    height: auto;
+}
+
+.site-nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 56px;
+}
+
+.site-nav a {
+    color: #0A0A0A;
+    text-decoration: none;
+    font-size: 1.25rem;   /* 20 px */
+    transition: opacity 0.2s ease;
+}
+
+.site-nav a:hover {
+    opacity: 0.6;
+}
+
+.intro {
+    max-width: 700px;
+    margin: 56px auto 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.intro p {
+    margin: 0;
+    font-size: 1.45rem;
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+.bluesky {
+    max-width: 700px;
+    margin: 56px auto 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.bluesky p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+.bluesky-banner {
+    display: inline-block;
+    margin-top: 18px;
+}
+
+.bluesky-banner img {
+    display: block;
+    width: 160px;
+    max-width: 70vw;
+    height: auto;
+}
+
+.stories {
+    max-width: 700px;
+    margin: 56px auto 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.stories h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.story-card {
+    max-width: 700px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.story-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.story-image {
+    display: block;
+    width: 480px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.story-card h3 {
+    margin: 24px 0 16px;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.story-card p {
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    text-align: left;
+}
+
+.site-footer {
+    margin: 100px 0 40px;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #777;
+}
+
+.saya-page {
+    max-width: 700px;
+    margin: 56px auto 0;
+    padding: 0 20px;
+}
+
+.saya-intro {
+    text-align: center;
+}
+
+.saya-intro h1 {
+    margin: 0 0 32px;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.saya-intro p {
+    margin: 0 auto 24px;
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+.saya-intro a {
+    color: #0A0A0A;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.issues {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.issue-link {
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 48px;
+}
+
+.issue-link:last-child {
+    margin-bottom: 0;
+}
+
+.issue-cover {
+    display: block;
+    width: 360px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+}

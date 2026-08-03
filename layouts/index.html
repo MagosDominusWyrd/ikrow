@@ -1,0 +1,54 @@
+{{ define "main" }}
+
+<section class="intro">
+    <p>
+        ここは、私が思い描いたままの姿で、物語やキャラクター、そして世界を綴っていく私の創作サイトです。
+        それぞれのセクションは独自に育ち、それぞれの物語を紡いでいきます。
+    </p>
+</section>
+
+<section class="bluesky">
+    <p>
+        私の世界はBlueskyでも生きています。そこで私と直接お話しすることもできます。
+    </p>
+
+    <a
+        class="bluesky-banner"
+        href="https://bsky.app/profile/ikrow.space"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="BlueskyでIvan Krowのプロフィールを開く"
+    >
+        <img
+            src="{{ "images/bluesky-banner.png" | relURL }}"
+            alt="Bluesky"
+        >
+    </a>
+</section>
+
+<section class="stories">
+    <h2>語りたい話</h2>
+</section>
+
+<section class="story-card">
+    <a
+        href="{{ "saya/" | relURL }}"
+        class="story-card-link"
+    >
+
+        <img
+            src="{{ "images/saya-title.png" | relURL }}"
+            alt="早見沙耶の日記"
+            class="story-image"
+        >
+
+        <h3>早見沙耶の日記</h3>
+
+        <p>
+            十九歳の早見沙耶は、人生の事情から日本を離れ、サンクトペテルブルクで新しい生活の日々を綴り始めます。これは、何気ない日常や小さな発見、新しい文化との出会い、そして故郷を離れた場所で自分自身の道を探していく穏やかな物語です。
+        </p>
+
+    </a>
+</section>
+
+{{ end }}
