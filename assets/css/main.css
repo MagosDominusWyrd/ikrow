@@ -283,3 +283,60 @@ body {
     border: none;
     max-width: 100%;
 }
+
+.support-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 14px 32px;
+
+    background: #0A0A0A;
+    color: #FFFFFF;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+
+    transition: opacity .2s ease;
+}
+
+.support-button:hover {
+    opacity: 0.85;
+}
+
+.about-page {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-page h1 {
+    margin-bottom: 2rem;
+}
+
+.about-portrait {
+    width: 520px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 3rem;
+}
+
+.about-text {
+    max-width: 700px;
+    margin: 48px auto 0;
+    text-align: left;
+}
+
+.about-text p {
+    margin: 0 0 24px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.95;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
