@@ -1,0 +1,38 @@
+{{ define "main" }}
+
+<article class="bard-song-page">
+
+    <header class="bard-song-header">
+        <h1>{{ .Params.author }} — {{ .Title }}</h1>
+    </header>
+
+    <div class="bard-song-content">
+
+        {{ range .Params.sections }}
+
+            {{ $imagePath := printf "images/bard-songs/%s" .image }}
+            {{ $img := resources.Get $imagePath }}
+
+            {{ with $img }}
+                <img
+                    src="{{ .RelPermalink }}"
+                    width="{{ .Width }}"
+                    height="{{ .Height }}"
+                    alt="{{ $.Title }}"
+                    class="bard-song-image"
+                >
+            {{ end }}
+
+            {{ range .blocks }}
+                <p class="bard-song-text">
+                    {{ . | replaceRE "\n" "<br>" | safeHTML }}
+                </p>
+            {{ end }}
+
+        {{ end }}
+
+    </div>
+
+</article>
+
+{{ end }}

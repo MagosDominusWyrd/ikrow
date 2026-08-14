@@ -1,0 +1,96 @@
+{{ define "main" }}
+
+<section class="bard-page">
+
+    <header class="bard-intro">
+
+        <h1>吟遊詩人の歌</h1>
+
+        {{ $img := resources.Get "images/elwen-title.webp" }}
+
+        <img
+            src="{{ $img.RelPermalink }}"
+            width="{{ $img.Width }}"
+            height="{{ $img.Height }}"
+            alt="エルウェン・アルデル"
+            class="bard-title-image"
+        >
+
+        <div class="bard-description">
+
+            <p>
+                このページでは、ロシア語で歌われてきたファンタジー・バラッドを、日本語に訳してご紹介しています。
+                愛と死、旅路、英雄的な行い、そして時には決して英雄的とは言えない行い。そんな物語を歌った歌たちです。
+            </p>
+
+            <p>
+                そして、これらの歌を皆さんに届けるのが、エルフの吟遊詩人エルウェン・アルデルです。
+                彼女はただ歌を歌うだけではありません。ひとつひとつのバラッドの世界を旅し、その物語を生き、時には自らその主人公となって、皆さんのために歌います。
+            </p>
+
+        </div>
+
+    </header>
+
+    <div class="bard-search">
+        <input
+            type="search"
+            id="bard-song-search"
+            placeholder="曲名を検索"
+            aria-label="曲名を検索"
+        >
+    </div>
+
+    <section class="bard-song-list" id="bard-song-list">
+
+        {{ range .Pages.ByDate.Reverse }}
+
+            <a
+                class="bard-song-link"
+                href="{{ .RelPermalink }}"
+                data-search="{{ .Params.author }} {{ .Title }}"
+            >
+                {{ .Params.author }} — {{ .Title }}
+            </a>
+
+        {{ end }}
+
+    </section>
+
+    <section class="support">
+
+        <p>
+            エルウェンに次の酒場で一杯のエールや美味しいステーキをご馳走したいと思っていただけましたら、こちらから応援していただけます。
+        </p>
+
+        <a
+            class="support-button"
+            href="https://app.lava.top/ivankrow?tabId=donate"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            創作を応援する
+        </a>
+
+    </section>
+
+</section>
+
+<script>
+    const searchInput = document.getElementById("bard-song-search");
+    const songLinks = document.querySelectorAll(".bard-song-link");
+
+    searchInput.addEventListener("input", function () {
+        const query = this.value.trim().toLowerCase();
+
+        songLinks.forEach(function (link) {
+            const searchableText = link.dataset.search.toLowerCase();
+
+            link.style.display = searchableText.includes(query)
+                ? ""
+                : "none";
+        });
+    });
+</script>
+
+{{ end }}

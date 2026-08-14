@@ -340,3 +340,146 @@ body {
 .about-text p:last-child {
     margin-bottom: 0;
 }
+
+/* Bard songs */
+
+.bard-page {
+    max-width: 760px;
+    margin: 56px auto 0;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.bard-page h1 {
+    margin: 0 0 32px;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.bard-title-image {
+    display: block;
+    width: 360px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.bard-intro {
+    text-align: center;
+}
+
+.bard-description {
+    margin-top: 32px;
+}
+
+.bard-description p {
+    margin: 0 auto 24px;
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+.bard-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* Bard song page */
+
+.bard-song-page {
+    max-width: 960px;
+    margin: 56px auto 0;
+    padding: 0 24px;
+}
+
+.bard-song-header {
+    text-align: center;
+}
+
+.bard-song-header h1 {
+    margin: 0 0 40px;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.bard-song-content {
+    text-align: center;
+}
+
+.bard-song-image {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 700px;
+    margin: 48px auto 32px;
+    border-radius: 8px;
+}
+
+.bard-song-image:first-child {
+    margin-top: 0;
+}
+
+.bard-song-text {
+    max-width: 700px;
+    margin: 0 auto 24px;
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+.bard-song-text:last-child {
+    margin-bottom: 0;
+}
+
+.bard-search {
+    max-width: 520px;
+    margin: 40px auto 32px;
+}
+
+.bard-search input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px 16px;
+
+    border: 1px solid #C9CDD2;
+    border-radius: 8px;
+
+    background: #FFFFFF;
+    color: #0A0A0A;
+
+    font-family: "Shippori Mincho", serif;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    outline: none;
+}
+
+.bard-search input:focus {
+    border-color: #0A0A0A;
+}
+
+.bard-search input::placeholder {
+    color: #8A8F96;
+}
+
+.bard-song-link {
+    display: block;
+    color: #0A0A0A;
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.9;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.bard-song-link:visited {
+    color: #0A0A0A;
+}
+
+.bard-song-link:hover {
+    opacity: 0.6;
+}

@@ -37,20 +37,16 @@
     >
 
         {{ with resources.Get "images/saya-title.png" }}
-
-    {{ with .Resize "1000x webp q82" }}
-
-        <img
-            src="{{ .RelPermalink }}"
-            width="{{ .Width }}"
-            height="{{ .Height }}"
-            alt="早見沙耶の日記"
-            class="story-image"
-        >
-
-    {{ end }}
-
-{{ end }}
+            {{ with .Resize "1000x webp q82" }}
+                <img
+                    src="{{ .RelPermalink }}"
+                    width="{{ .Width }}"
+                    height="{{ .Height }}"
+                    alt="早見沙耶の日記"
+                    class="story-image"
+                >
+            {{ end }}
+        {{ end }}
 
         <h3>早見沙耶の日記</h3>
 
@@ -91,28 +87,45 @@
     </a>
 </section>
 
+<section class="story-card">
+    <a
+        href="{{ "bard-songs/" | relURL }}"
+        class="story-card-link"
+    >
+
+        {{ with resources.Get "images/elwen-title.webp" }}
+            <img
+                src="{{ .RelPermalink }}"
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+                alt="吟遊詩人の歌"
+                class="story-image"
+            >
+        {{ end }}
+
+        <h3>吟遊詩人の歌</h3>
+
+        <p>
+            ロシア語で歌われてきたファンタジー・バラッドを、日本語に訳してご紹介する場所です。
+            愛と死、旅路、英雄的な行い、そして時には決して英雄的とは言えない行いを歌った物語を、エルフの吟遊詩人エルウェン・アルデルが皆さんに届けます。
+        </p>
+
+    </a>
+</section>
+
 <section class="support">
 
     <p>
-
         私の創作活動を気に入っていただけましたら、ご支援いただけると嬉しいです。
-
     </p>
 
     <a
-
         class="support-button"
-
         href="https://app.lava.top/ivankrow?tabId=donate"
-
         target="_blank"
-
         rel="noopener noreferrer"
-
     >
-
         創作を応援する
-
     </a>
 
 </section>
