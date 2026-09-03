@@ -64,6 +64,25 @@
         {{ end }}
     </a>
 
+    <a
+        class="issue-link"
+        href="https://www.icloud.com/iclouddrive/08cTX5Y9EeQuHFJ4O9XJ4WSNg#%E6%97%A9%E8%A6%8B_%E6%B2%99%E8%80%B6%E3%81%AE%E7%89%A9%E8%AA%9E_(2026%E5%B9%B48%E6%9C%88)"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        {{ with resources.Get "images/saya-august.webp" }}
+            {{ with .Resize "1000x webp q82" }}
+                <img
+                    src="{{ .RelPermalink }}"
+                    width="{{ .Width }}"
+                    height="{{ .Height }}"
+                    alt="早見沙耶の日記 2026年8月"
+                    class="issue-cover"
+                >
+            {{ end }}
+        {{ end }}
+    </a>
+
 </section>
 
 <section class="support">
