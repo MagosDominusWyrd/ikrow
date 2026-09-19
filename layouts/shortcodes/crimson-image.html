@@ -1,0 +1,19 @@
+{{ $src := .Get "src" }}
+{{ $imagePath := printf "images/beyond-the-crimson-dawn/%s" $src }}
+{{ $img := resources.Get $imagePath }}
+
+{{ with $img }}
+    <figure class="crimson-figure">
+        <img
+            src="{{ .RelPermalink }}"
+            width="{{ .Width }}"
+            height="{{ .Height }}"
+            alt="{{ $.Get "alt" | default "" }}"
+            class="crimson-content-image"
+        >
+
+        {{ with $.Get "caption" }}
+            <figcaption>{{ . }}</figcaption>
+        {{ end }}
+    </figure>
+{{ end }}

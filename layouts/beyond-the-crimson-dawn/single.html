@@ -1,0 +1,36 @@
+{{ define "main" }}
+
+<article class="crimson-chapter">
+
+    <header class="crimson-chapter-header">
+        <h1>{{ .Date.Format "2006年1月2日" }} · {{ .Params.place }}</h1>
+
+        <p class="crimson-chapter-summary">
+            {{ .Params.summary }}
+        </p>
+    </header>
+
+    {{ with .Params.image }}
+
+        {{ $imagePath := printf "images/beyond-the-crimson-dawn/%s" . }}
+        {{ $img := resources.Get $imagePath }}
+
+        {{ with $img }}
+            <img
+                src="{{ .RelPermalink }}"
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+                alt="{{ $.Params.summary }}"
+                class="crimson-chapter-image"
+            >
+        {{ end }}
+
+    {{ end }}
+
+    <div class="crimson-chapter-content">
+        {{ .Content }}
+    </div>
+
+</article>
+
+{{ end }}

@@ -32,6 +32,54 @@
 
 <section class="story-card">
     <a
+        href="{{ "beyond-the-crimson-dawn/" | relURL }}"
+        class="story-card-link"
+    >
+
+        {{ with resources.Get "images/beyond-the-crimson-dawn-title.webp" }}
+            <img
+                src="{{ .RelPermalink }}"
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+                alt="茜東雲の彼方"
+                class="story-image"
+            >
+        {{ end }}
+
+        <h3>茜東雲の彼方</h3>
+
+        <div class="crimson-home-poem">
+            <p>
+                異国の鋼の鳥たちは、<br>
+                君の安らかな眠りを守るために空へと放たれた。<br>
+                ヤコヴレフ、スホーイ、ミコヤン、グレヴィッチ、ツポレフ。
+            </p>
+
+            <p>
+                異国の父たちは、自らの息子たちのために剣を鍛えた。<br>
+                息子たちが守るべきものを、守り抜けるように。<br>
+                そして、その守るものの中には、<br>
+                君の文化も、歴史も、信仰も、言葉もあった。
+            </p>
+
+            <p>
+                だが、いつかその日は来る。<br>
+                今日かもしれない。<br>
+                一年後かもしれない。<br>
+                あるいは、人ひとりの生涯を経たその先かもしれない。
+            </p>
+
+            <p>
+                そのとき君は、<br>
+                自らの安らぎを、自らの手で守るのだ。
+            </p>
+        </div>
+
+    </a>
+</section>
+
+<section class="story-card">
+    <a
         href="{{ "saya/" | relURL }}"
         class="story-card-link"
     >

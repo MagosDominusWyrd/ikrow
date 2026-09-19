@@ -1,0 +1,145 @@
+{{ define "main" }}
+
+<section class="crimson-page">
+
+    <header class="crimson-header">
+
+        <h1>茜東雲の彼方</h1>
+
+        {{ with resources.Get "images/beyond-the-crimson-dawn-title.webp" }}
+            <img
+                src="{{ .RelPermalink }}"
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+                alt="茜東雲の彼方"
+                class="crimson-title-image"
+            >
+        {{ end }}
+
+        <div class="crimson-intro-poem">
+
+            <p>
+                異国の鋼の鳥たちは、<br>
+                君の安らかな眠りを守るために空へと放たれた。<br>
+                ヤコヴレフ、スホーイ、ミコヤン、グレヴィッチ、ツポレフ。
+            </p>
+
+            <p>
+                異国の父たちは、自らの息子たちのために剣を鍛えた。<br>
+                息子たちが守るべきものを、守り抜けるように。<br>
+                そして、その守るものの中には、<br>
+                君の文化も、歴史も、信仰も、言葉もあった。
+            </p>
+
+            <p>
+                だが、いつかその日は来る。<br>
+                今日かもしれない。<br>
+                一年後かもしれない。<br>
+                あるいは、人ひとりの生涯を経たその先かもしれない。
+            </p>
+
+            <p>
+                そのとき君は、<br>
+                自らの安らぎを、自らの手で守るのだ。
+            </p>
+
+        </div>
+
+        <div class="crimson-description">
+
+            <p>
+                「茜東雲の彼方」は、私たちの世界とは二度にわたって異なる道を歩むことになった、もうひとつの世界を描く連作イラストストーリーである。
+            </p>
+
+            <p>
+                最初の分岐は1945年、第二次世界大戦最後の日々に起こる。日本の降伏と戦後の極東秩序をめぐって下された一連の決断が、やがてソヴィエト連邦と日本を、私たちの歴史には存在しなかった関係へと導いていく。
+            </p>
+
+            <p>
+                二度目の分岐は1991年に起こる。ソヴィエト連邦は、自らの崩壊を私たちの歴史とは異なる形で迎える。旧来のソ連は終わりを告げるが、国家そのものは消滅しない。政治危機、紛争、過ち、そして痛みを伴う再編を経ながら、徐々に別の国家へと姿を変えていく。
+            </p>
+
+            <p>
+                この二つの変化が、一世紀にわたる歴史を持つ世界の土台となる。
+            </p>
+
+            <p>
+                物語の中心にあるのはソ連と日本である。しかし、これは「正しい」ソ連を描く物語ではない。そして、ソ連という「兄」が日本の手を引いて導く物語でもない。この世界のソ連は過ちを犯し、敗北し、時には苛烈な手段を取り、自国の利益を追求し、自らの決断の代償を支払う。一方、日本は自らの利益と国内の矛盾、そして未来についての独自の展望を持つ、独立した国家であり続ける。
+            </p>
+
+            <p>
+                両国の関係もまた、彼ら自身とともに変化していく。戦後初期の不信から慎重な協力へ。協力から相互依存へ。そしてやがて、築き上げられた秩序そのものの基盤を見直さなければならない時を迎える。
+            </p>
+
+            <p>
+                この物語には、未来を知る語り手はいない。1945年を生きる人々は、1991年に何が起こるのかを知らない。1991年を生きる人々も、2045年の世界がどのような姿になるのかを知らない。彼らはその時点で知り得ることだけをもとに決断し、間違い、議論し、退き、そして時には、その意味と結果が何十年も後になって初めて明らかになるものを、偶然生み出してしまう。
+            </p>
+
+            <p>
+                だからこそ、「茜東雲の彼方」はひとつの連続した物語としてではなく、個々の出来事を記録した年代記として語られる。外交声明、執務室で交わされる会話、国際危機、工場の現場、戦争、新聞のインタビュー、そして人々の日常の一場面。それらが少しずつ積み重なり、この世界の歴史を形作っていく。
+            </p>
+
+            <p>
+                各章に記されるのは、日付と場所だけである。
+            </p>
+
+            <p class="crimson-description-ending">
+                歴史は、すでに起きた。<br><br>
+                だが、私たちはまだ、その全貌を知らない。
+            </p>
+
+        </div>
+
+    </header>
+
+    <div class="crimson-search">
+        <input
+            type="search"
+            id="crimson-search"
+            placeholder="年代記を検索"
+            aria-label="年代記を検索"
+        >
+    </div>
+
+    <section class="crimson-chronology">
+
+        {{ range .Pages.ByDate }}
+
+            <a
+                class="crimson-entry"
+                href="{{ .RelPermalink }}"
+                data-search="{{ .Date.Format "2006年1月2日" }} {{ .Params.place }} {{ .Params.summary }}"
+            >
+                <span class="crimson-entry-title">
+                    {{ .Date.Format "2006年1月2日" }} · {{ .Params.place }}
+                </span>
+
+                <span class="crimson-entry-summary">
+                    {{ .Params.summary }}
+                </span>
+            </a>
+
+        {{ end }}
+
+    </section>
+
+</section>
+
+<script>
+    const searchInput = document.getElementById("crimson-search");
+    const entries = document.querySelectorAll(".crimson-entry");
+
+    searchInput.addEventListener("input", function () {
+        const query = this.value.trim().toLowerCase();
+
+        entries.forEach(function (entry) {
+            const searchableText = entry.dataset.search.toLowerCase();
+
+            entry.style.display = searchableText.includes(query)
+                ? ""
+                : "none";
+        });
+    });
+</script>
+
+{{ end }}

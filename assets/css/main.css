@@ -483,3 +483,223 @@ body {
 .bard-song-link:hover {
     opacity: 0.6;
 }
+
+/* Beyond the Crimson Dawn */
+
+.crimson-page {
+    max-width: 760px;
+    margin: 56px auto 0;
+    padding: 0 24px;
+}
+
+.crimson-header {
+    text-align: center;
+}
+
+.crimson-header h1 {
+    margin: 0 0 40px;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.crimson-chronology {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.crimson-entry {
+    display: block;
+    margin-bottom: 32px;
+    color: #0A0A0A;
+    text-decoration: none;
+}
+
+.crimson-entry:last-child {
+    margin-bottom: 0;
+}
+
+.crimson-entry-title {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.7;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.crimson-entry-summary {
+    display: block;
+    margin-top: 6px;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+.crimson-entry:hover {
+    opacity: 0.6;
+}
+
+.crimson-title-image {
+    display: block;
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    margin: 0 auto 40px;
+    border-radius: 8px;
+}
+
+.crimson-intro-poem {
+    max-width: 700px;
+    margin: 0 auto 48px;
+    text-align: left;
+}
+
+.crimson-intro-poem p {
+    margin: 0 0 24px;
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+.crimson-intro-poem p:last-child {
+    margin-bottom: 0;
+}
+
+.crimson-description {
+    max-width: 700px;
+    margin: 0 auto 56px;
+    text-align: left;
+}
+
+.crimson-description p {
+    margin: 0 0 24px;
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.95;
+}
+
+.crimson-description p:last-child {
+    margin-bottom: 0;
+}
+
+.crimson-description-ending {
+    margin-top: 40px !important;
+    text-align: center;
+}
+
+
+/* Beyond the Crimson Dawn chapter */
+
+.crimson-chapter {
+    max-width: 960px;
+    margin: 56px auto 0;
+    padding: 0 24px;
+}
+
+.crimson-chapter-header {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.crimson-chapter-header h1 {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.crimson-chapter-summary {
+    margin: 12px 0 0;
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.crimson-chapter-content {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.crimson-chapter-content p {
+    max-width: 700px;
+    margin: 0 auto 24px;
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.95;
+}
+
+.crimson-chapter-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Images inside Beyond the Crimson Dawn chapters */
+
+.crimson-figure {
+    margin: 48px auto;
+    text-align: center;
+}
+
+.crimson-content-image {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 700px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.crimson-figure figcaption {
+    max-width: 700px;
+    margin: 12px auto 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #777;
+}
+
+.crimson-home-poem {
+    margin-top: 0;
+    text-align: left;
+}
+
+.crimson-home-poem p {
+    margin: 0 0 24px;
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.9;
+}
+
+.crimson-home-poem p:last-child {
+    margin-bottom: 0;
+}
+
+.crimson-search {
+    max-width: 520px;
+    margin: 0 auto 40px;
+}
+
+.crimson-search input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    border: 1px solid #C9CDD2;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #0A0A0A;
+    font-family: "Shippori Mincho", serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    outline: none;
+}
+
+.crimson-search input:focus {
+    border-color: #0A0A0A;
+}
+
+.crimson-search input::placeholder {
+    color: #8A8F96;
+}

@@ -3,3 +3,4 @@ languageCode = "ja"
 title = "I. Krow"
 
 disableKinds = ["taxonomy", "term"]
+buildFuture = true
