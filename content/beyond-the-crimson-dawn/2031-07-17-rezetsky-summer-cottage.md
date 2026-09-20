@@ -3,6 +3,7 @@ title: "2031年7月17日 · レゼツキー教授の夏の別荘"
 date: 2031-07-17
 place: "レゼツキー教授の夏の別荘"
 summary: "サラトフ州コムソモール青年メディア「ヴォルガ」の歴史ポッドキャストにおけるニコライ・レゼツキー教授へのインタビュー"
+og_image: "beyond-the-crimson-dawn/17-07-2031-emperor-podcast.webp"
 ---
 
 {{< crimson-image src="17-07-2031-emperor-podcast.webp" >}}
