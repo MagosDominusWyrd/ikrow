@@ -662,3 +662,122 @@ body {
 .crimson-search input::placeholder {
     color: #8A8F96;
 }
+
+/* Tokoyo Meiho */
+
+.tokoyo-page {
+    max-width: 760px;
+    margin: 56px auto 0;
+    padding: 0 24px;
+}
+
+.tokoyo-header {
+    text-align: center;
+}
+
+.tokoyo-header h1 {
+    margin: 0 0 40px;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.tokoyo-title-image {
+    display: block;
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    margin: 0 auto 40px;
+    border-radius: 8px;
+}
+
+.tokoyo-intro-poem {
+    margin: 0 auto 64px;
+    text-align: center;
+}
+
+.tokoyo-intro-poem p {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 2.2;
+}
+
+.tokoyo-poem-list {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tokoyo-poem-link {
+    display: block;
+    margin-bottom: 24px;
+    color: #0A0A0A;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.8;
+    transition: opacity 0.2s ease;
+}
+
+.tokoyo-poem-link:last-child {
+    margin-bottom: 0;
+}
+
+.tokoyo-poem-link:hover {
+    opacity: 0.6;
+}
+
+/* Tokoyo Meiho: individual poems */
+
+.tokoyo-single {
+    max-width: 960px;
+    margin: 56px auto 0;
+    padding: 0 24px;
+}
+
+.tokoyo-single-header {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.tokoyo-single-header h1 {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.tokoyo-single-figure {
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.tokoyo-single-image {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 700px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.tokoyo-single-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tokoyo-single-content p {
+    margin: 0 0 32px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 2.2;
+}
+
+.tokoyo-single-content p:last-child {
+    margin-bottom: 0;
+}

@@ -107,6 +107,31 @@
 
 <section class="story-card">
     <a
+        href="{{ "tokoyo-meiho/" | relURL }}"
+        class="story-card-link"
+    >
+
+        {{ with resources.Get "images/tokoyo-meiho/tokoyo-title.webp" }}
+            <img
+                src="{{ .RelPermalink }}"
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+                alt="常世 冥寶"
+                class="story-image"
+            >
+        {{ end }}
+
+        <h3>常世 冥寶</h3>
+
+        <p>
+            ここでは、私なりに日本語の詩作に挑戦しています。その創作を手伝ってくれるのは、優雅でありながら危険な女性、常世 冥寶です。
+        </p>
+
+    </a>
+</section>
+
+<section class="story-card">
+    <a
         href="{{ "rysya/" | relURL }}"
         class="story-card-link"
     >

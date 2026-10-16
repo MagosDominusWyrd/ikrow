@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<article class="tokoyo-single">
+
+    <header class="tokoyo-single-header">
+        <h1>{{ .Title }}</h1>
+    </header>
+
+    {{ with .Params.image }}
+        {{ $imagePath := printf "images/tokoyo-meiho/%s" . }}
+
+        {{ with resources.Get $imagePath }}
+            <figure class="tokoyo-single-figure">
+                <img
+                    src="{{ .RelPermalink }}"
+                    width="{{ .Width }}"
+                    height="{{ .Height }}"
+                    alt="{{ $.Title }}"
+                    class="tokoyo-single-image"
+                >
+            </figure>
+        {{ end }}
+    {{ end }}
+
+    <div class="tokoyo-single-content">
+        {{ .Content }}
+    </div>
+
+</article>
+
+{{ end }}

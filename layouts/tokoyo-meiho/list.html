@@ -1,0 +1,42 @@
+{{ define "main" }}
+
+<section class="tokoyo-page">
+
+    <header class="tokoyo-header">
+
+        <h1>常世 冥寶</h1>
+
+        {{ with resources.Get "images/tokoyo-meiho/tokoyo-title.webp" }}
+            <img
+                src="{{ .RelPermalink }}"
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+                alt="常世 冥寶"
+                class="tokoyo-title-image"
+            >
+        {{ end }}
+
+        <div class="tokoyo-intro-poem">
+            {{ .Content }}
+        </div>
+
+    </header>
+
+    <section class="tokoyo-poem-list">
+
+        {{ range .RegularPages.ByDate.Reverse }}
+
+            <a
+                class="tokoyo-poem-link"
+                href="{{ .RelPermalink }}"
+            >
+                {{ .Title }}
+            </a>
+
+        {{ end }}
+
+    </section>
+
+</section>
+
+{{ end }}
