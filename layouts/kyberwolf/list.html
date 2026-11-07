@@ -1,0 +1,51 @@
+
+{{ define "main" }}
+
+<section class="kyberwolf-page">
+
+    <header class="kyberwolf-header">
+
+        <h1>KYBERWOLF</h1>
+
+        {{ with resources.Get "images/kyberwolf-title.webp" }}
+            <img
+                src="{{ .RelPermalink }}"
+                width="{{ .Width }}"
+                height="{{ .Height }}"
+                alt="KYBERWOLF — ヤミロウ"
+                class="kyberwolf-title-image"
+            >
+        {{ end }}
+
+        <div class="kyberwolf-description">
+            {{ .Content }}
+        </div>
+
+    </header>
+
+    {{ with .Params.videos }}
+
+        <section class="kyberwolf-videos" aria-label="KYBERWOLFの楽曲">
+
+            {{ range . }}
+
+                <div class="kyberwolf-video">
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/{{ . }}"
+                        title="KYBERWOLF YouTube video"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+
+            {{ end }}
+
+        </section>
+
+    {{ end }}
+
+</section>
+
+{{ end }}
