@@ -5,6 +5,7 @@ description: "AggrotechとEBMの激しい電子音楽と日本語ヴォーカル
 og_image: "kyberwolf-title.webp"
 videos:
   - "EoqA17_UcMo"
+  - "YWdqEWbBzW0"
 ---
 
 KYBERWOLFは、AggrotechとEBMの激しいエレクトロニックサウンドに、日本語のヴォーカルを融合させた音楽プロジェクトです。
