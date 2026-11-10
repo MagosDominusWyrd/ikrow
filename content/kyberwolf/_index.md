@@ -1,6 +1,6 @@
 
 ---
-title: "KYBERWOLF"
+title: "カイバーウルフ"
 description: "AggrotechとEBMの激しい電子音楽と日本語ヴォーカルを融合させた音楽プロジェクト。"
 og_image: "kyberwolf-title.webp"
 videos:
@@ -8,7 +8,7 @@ videos:
   - "YWdqEWbBzW0"
 ---
 
-KYBERWOLFは、AggrotechとEBMの激しいエレクトロニックサウンドに、日本語のヴォーカルを融合させた音楽プロジェクトです。
+KYBERWOLF(カイバーウルフ)は、AggrotechとEBMの激しいエレクトロニックサウンドに、日本語のヴォーカルを融合させた音楽プロジェクトです。
 
 その声と顔を担うのは、狼の少女ヤミロウ（闇狼）。一筋縄ではいかない性格と、独自の世界観を持っています。
 
